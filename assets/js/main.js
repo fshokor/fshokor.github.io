@@ -232,3 +232,26 @@ if (ac) {
   }
   drawAvatar();
 }
+
+/* ============================================================
+   ADD THIS TO THE BOTTOM OF main.js
+   (inside or after your existing IntersectionObserver setup)
+   ============================================================ */
+ 
+// Staggered skill tag reveal
+const skillTagObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.skill-tags').forEach((tagGroup, i) => {
+        setTimeout(() => {
+          tagGroup.classList.add('tags-visible');
+        }, i * 80);
+      });
+      skillTagObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+ 
+document.querySelectorAll('.skill-group').forEach(group => {
+  skillTagObserver.observe(group);
+});
