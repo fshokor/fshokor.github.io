@@ -59,16 +59,39 @@ html, body { width: 100%; background: var(--bg); color: var(--text); font-family
 
 .hero { position: relative; z-index: 10; min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; padding: 0 var(--pad); }
 
-nav { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; border-bottom: 0.5px solid rgba(77,166,255,0.1); }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px var(--pad);
+  border-bottom: 0.5px solid rgba(77,166,255,0.1);
+  background: rgba(5,10,18,0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+nav.scrolled {
+  background: rgba(5,10,18,0.96);
+  box-shadow: 0 1px 0 rgba(77,166,255,0.08);
+}
+
+/* Offset hero body so it doesn't hide under fixed nav */
+.hero-body { padding-top: 100px; }
 .nav-logo { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; color: var(--accent); opacity: 0.9; text-transform: uppercase; }
 .nav-links { display: flex; gap: 36px; list-style: none; }
 .nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: color 0.2s; cursor: none; }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover,
+.nav-links a.active { color: var(--accent); }
 .nav-status { display: flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
 .pulse-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2.8s ease-in-out infinite; }
 @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 var(--accent-glow); } 50% { box-shadow: 0 0 0 6px transparent; } }
 
-.hero-body { display: flex; flex-direction: column; justify-content: center; padding: 7vh 0 4vh; max-width: 820px; }
+.hero-body { display: flex; flex-direction: column; justify-content: center; padding: 7vh 0 4vh; max-width: 820px; padding-top: 100px; }
 .eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; opacity: 0; animation: rise 0.7s ease forwards 0.25s; }
 .eyebrow-bar { width: 28px; height: 1.5px; background: var(--accent); opacity: 0.7; }
 .eyebrow-text { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); opacity: 0.85; }

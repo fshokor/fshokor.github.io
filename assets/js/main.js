@@ -14,6 +14,64 @@ document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; })
   requestAnimationFrame(animCursor);
 })();
 
+/* ── STICKY NAV: scrolled class + active section highlight ── */
+const mainNav = document.getElementById('main-nav');
+const navLinks = document.querySelectorAll('.nav-links a');
+const sections = document.querySelectorAll('section[id]');
+
+function updateNav() {
+  // Scrolled class for background opacity
+  if (window.scrollY > 40) {
+    mainNav.classList.add('scrolled');
+  } else {
+    mainNav.classList.remove('scrolled');
+  }
+
+  // Active section highlight
+  let current = '';
+  const offset = 100;
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top <= offset) current = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+updateNav();
+
+/* ── STAT COUNTERS ── */
+let statsAnimated = false;
+function animateStats() {
+  if (statsAnimated) return;
+  statsAnimated = true;
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    let current = 0;
+    el.textContent = '0';
+    const step = () => {
+      current = Math.min(current + 1, target);
+      el.textContent = current;
+      if (current < target) setTimeout(step, 80);
+    };
+    setTimeout(step, 200);
+  });
+}
+
+/* ── STAGGERED SKILL TAGS ── */
+let tagsAnimated = false;
+function animateTags() {
+  if (tagsAnimated) return;
+  tagsAnimated = true;
+  document.querySelectorAll('.skill-tag').forEach((tag, i) => {
+    setTimeout(() => tag.classList.add('visible'), i * 40);
+  });
+}
+
 /* ── SCROLL REVEAL ── */
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -26,25 +84,17 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-/* ── STAT COUNTERS ── */
-function animateStats() {
-  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
-    const target = parseInt(el.dataset.target);
-    let current = 0;
-    const interval = setInterval(() => {
-      current = Math.min(current + 1, target);
-      el.textContent = current;
-      if (current >= target) clearInterval(interval);
-    }, 80);
+/* ── ALSO trigger stats when stat cards come into view (fallback) ── */
+const statsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateStats();
+      statsObserver.disconnect();
+    }
   });
-}
-
-/* ── STAGGERED SKILL TAGS ── */
-function animateTags() {
-  document.querySelectorAll('.skill-tag').forEach((tag, i) => {
-    setTimeout(() => tag.classList.add('visible'), i * 40);
-  });
-}
+}, { threshold: 0.3 });
+const statsGrid = document.querySelector('.stats-grid');
+if (statsGrid) statsObserver.observe(statsGrid);
 
 /* ── HERO BACKGROUND CANVAS ── */
 const canvas = document.getElementById('bg-canvas');
