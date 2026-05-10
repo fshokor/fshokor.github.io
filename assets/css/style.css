@@ -655,7 +655,131 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
  
  
 /* ============================================================
-   CONTACT
+   06 — INTERNSHIPS
+   ============================================================ */
+.section-internships {
+  padding: 120px 0;
+  border-top: 0.5px solid var(--accent-border);
+}
+
+.intern-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.intern-item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0 24px;
+  position: relative;
+}
+
+.intern-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.intern-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 10px var(--accent-glow);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.intern-line {
+  width: 1px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--accent-border), transparent);
+  margin-top: 4px;
+  min-height: 40px;
+}
+
+.intern-card {
+  background: var(--surface);
+  border: 0.5px solid var(--accent-border);
+  border-left: 2px solid var(--accent2);
+  border-radius: 6px;
+  padding: 22px 26px;
+  margin-bottom: 20px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.intern-card:hover {
+  background: var(--surface2);
+  border-left-color: var(--accent);
+}
+
+.intern-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.intern-period {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.intern-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.intern-role {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.intern-lab {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  margin: 0 0 3px;
+}
+
+.intern-advisor {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin: 0 0 14px;
+  opacity: 0.75;
+}
+
+.intern-desc {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+.intern-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+/* ============================================================
+   07 — CONTACT
    ============================================================ */
 .section-contact {
   padding: 120px 0 0;
