@@ -77,8 +77,8 @@ const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add('visible');
-    if (entry.target.id === 'rc')     animateStats();
-    if (entry.target.id === 'skills') animateTags();
+    if (entry.target.id === 'rc')          animateStats();
+    if (entry.target.id === 'about-skills') animateTags();
     revealObserver.unobserve(entry.target);
   });
 }, { threshold: 0.12 });
