@@ -150,8 +150,7 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 .skill-group-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); opacity: 0.7; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
 .skill-group-label::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); opacity: 0.6; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-.skill-tag { font-family: var(--mono); font-size: 11px; padding: 4px 10px; border-radius: 2px; border: 0.5px solid rgba(77,166,255,0.13); color: var(--muted); background: rgba(77,166,255,0.05); transition: all 0.18s; opacity: 0; transform: translateY(6px); transition: opacity 0.4s ease, transform 0.4s ease, color 0.18s, border-color 0.18s; }
-.skill-tag.visible { opacity: 1; transform: none; }
+.skill-tag { font-family: var(--mono); font-size: 11px; padding: 4px 10px; border-radius: 2px; border: 0.5px solid rgba(77,166,255,0.13); color: var(--muted); background: rgba(77,166,255,0.05); opacity: 1; transform: none; transition: color 0.18s, border-color 0.18s, background 0.18s; }
 .skill-tag:hover { color: var(--accent); border-color: var(--accent-border); background: var(--accent-dim); }
 
 /* ═══════════════════════════════════════
@@ -630,28 +629,34 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
   border: 0.5px solid rgba(180,210,255,0.15);
   border-radius: 4px;
   padding: 4px 10px;
+  opacity: 1;
+  transform: none;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.4s, transform 0.4s, background 0.2s, color 0.2s;
 }
- 
+.skill-tag:hover {
+  background: var(--accent-dim);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
 .skill-tag--accent {
   color: var(--accent);
   background: var(--accent-dim);
   border-color: var(--accent-border);
 }
- 
-/* staggered reveal — JS adds .tags-visible to .skill-tags */
-.skill-tags.tags-visible .skill-tag {
-  opacity: 1;
-  transform: none;
+
+/* staggered reveal for About section inline skills only */
+.skill-tags.tags-anim .skill-tag {
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.4s, transform 0.4s, background 0.2s, color 0.2s;
 }
-.skill-tags.tags-visible .skill-tag:nth-child(1) { transition-delay: 0.05s; }
-.skill-tags.tags-visible .skill-tag:nth-child(2) { transition-delay: 0.10s; }
-.skill-tags.tags-visible .skill-tag:nth-child(3) { transition-delay: 0.15s; }
-.skill-tags.tags-visible .skill-tag:nth-child(4) { transition-delay: 0.20s; }
-.skill-tags.tags-visible .skill-tag:nth-child(5) { transition-delay: 0.25s; }
+.skill-tags.tags-anim.tags-visible .skill-tag { opacity: 1; transform: none; }
+.skill-tags.tags-anim.tags-visible .skill-tag:nth-child(1) { transition-delay: 0.05s; }
+.skill-tags.tags-anim.tags-visible .skill-tag:nth-child(2) { transition-delay: 0.10s; }
+.skill-tags.tags-anim.tags-visible .skill-tag:nth-child(3) { transition-delay: 0.15s; }
+.skill-tags.tags-anim.tags-visible .skill-tag:nth-child(4) { transition-delay: 0.20s; }
+.skill-tags.tags-anim.tags-visible .skill-tag:nth-child(5) { transition-delay: 0.25s; }
  
  
 /* ============================================================
