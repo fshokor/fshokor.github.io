@@ -194,13 +194,9 @@
  
     <!-- ── OmicSage — Featured Card ── -->
     <div class="omicsage-card reveal">
- 
+
       <div class="omicsage-header">
         <div class="omicsage-title-block">
-          <div class="omicsage-eyebrow">
-            <span class="os-badge os-badge--live">In development</span>
-            <span class="os-badge os-badge--open">Open source · MIT</span>
-          </div>
           <h3 class="omicsage-name">Omic<span class="os-name-accent">Sage</span></h3>
           <p class="omicsage-tagline">AI-assisted single-cell multi-omics analysis platform — for biologists and bioinformaticians.</p>
         </div>
@@ -211,149 +207,17 @@
           </a>
         </div>
       </div>
- 
-      <p class="omicsage-description">
-        Single-cell analysis tools are fragmented and rarely produce publication-ready output.
-        OmicSage unifies scRNA-seq, scATAC-seq, spatial, and multiome analysis in one pipeline —
-        usable via a no-code interface or CLI, with optional AI interpretation that can be
-        switched off entirely.
-      </p>
- 
-      <!-- Three-layer architecture -->
-      <div class="os-architecture">
-        <div class="os-arch-label">Architecture</div>
-        <div class="os-arch-layers">
-          <div class="os-layer os-layer--ai">
-            <div class="os-layer-tag">Layer 3 — Optional</div>
-            <div class="os-layer-name">AI Intelligence</div>
-            <div class="os-layer-detail">BioChatter + LLM · QC threshold suggestions · cluster interpretation · PubMed RAG narratives</div>
-          </div>
-          <div class="os-layer-connector"><svg width="12" height="16" viewBox="0 0 12 16"><line x1="6" y1="0" x2="6" y2="16" stroke="rgba(77,166,255,0.3)" stroke-width="1" stroke-dasharray="3,3"/></svg></div>
-          <div class="os-layer os-layer--report">
-            <div class="os-layer-tag">Layer 2 — Always on</div>
-            <div class="os-layer-name">Report Engine</div>
-            <div class="os-layer-detail">Quarto + python-pptx · HTML/PDF reports · PowerPoint slides after every analysis step</div>
-          </div>
-          <div class="os-layer-connector"><svg width="12" height="16" viewBox="0 0 12 16"><line x1="6" y1="0" x2="6" y2="16" stroke="rgba(77,166,255,0.3)" stroke-width="1" stroke-dasharray="3,3"/></svg></div>
-          <div class="os-layer os-layer--pipeline">
-            <div class="os-layer-tag">Layer 1 — Always on</div>
-            <div class="os-layer-name">Core Pipeline</div>
-            <div class="os-layer-detail">Nextflow DSL2 · QC → normalize → integrate → cluster → annotate → downstream</div>
-          </div>
-        </div>
-      </div>
- 
-      <!-- Modalities -->
-      <div class="os-modalities">
-        <div class="os-mod-label">Modalities</div>
-        <div class="os-mod-grid">
-          <div class="os-mod-item"><span class="os-mod-dot"></span><span class="os-mod-name">scRNA-seq</span></div>
-          <div class="os-mod-item"><span class="os-mod-dot"></span><span class="os-mod-name">scATAC-seq</span></div>
-          <div class="os-mod-item"><span class="os-mod-dot"></span><span class="os-mod-name">Spatial transcriptomics</span><span class="os-mod-sub">Visium · MERFISH · Xenium</span></div>
-          <div class="os-mod-item"><span class="os-mod-dot"></span><span class="os-mod-name">Multiome integration</span><span class="os-mod-sub">RNA + ATAC jointly</span></div>
-        </div>
-      </div>
- 
-      <!-- Stack -->
-      <div class="os-stack">
-        <div class="os-stack-label">Stack</div>
-        <div class="skill-tags">
-          <span class="skill-tag skill-tag--accent">Python</span>
-          <span class="skill-tag skill-tag--accent">Nextflow DSL2</span>
-          <span class="skill-tag skill-tag--accent">Scanpy</span>
-          <span class="skill-tag skill-tag--accent">Seurat v5</span>
-          <span class="skill-tag skill-tag--accent">PyTorch</span>
-          <span class="skill-tag">Streamlit</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Quarto</span>
-          <span class="skill-tag">BioChatter</span>
-          <span class="skill-tag">R</span>
-        </div>
-      </div>
- 
+
     </div><!-- /omicsage-card -->
- 
-    <!-- Three pillars -->
-    <div class="os-pillars reveal">
-      <div class="os-pillar">
-        <div class="os-pillar-num">01</div>
-        <h4 class="os-pillar-title">End-to-end, multi-modal</h4>
-        <p class="os-pillar-body">scRNA-seq, scATAC-seq, spatial transcriptomics, and multiome integration in a single unified pipeline. No stitching tools together for every project.</p>
-      </div>
-      <div class="os-pillar">
-        <div class="os-pillar-num">02</div>
-        <h4 class="os-pillar-title">Automated reports, every step</h4>
-        <p class="os-pillar-body">Publication-ready HTML, PDF, and PowerPoint slides generated automatically after each analysis step — including AI-written narratives linked to live PubMed evidence.</p>
-      </div>
-      <div class="os-pillar">
-        <div class="os-pillar-num">03</div>
-        <h4 class="os-pillar-title">Works without AI</h4>
-        <p class="os-pillar-body">Set <code>ai_features: false</code> — the full pipeline runs, reports generate, no API key required. Genuinely free for any researcher, globally.</p>
-      </div>
-    </div>
  
     <!-- ── Secondary project cards ── -->
     <div class="proj-secondary-grid reveal">
- 
-      <!-- DLGBLUP -->
-      <div class="proj-card">
-        <div class="proj-card-header">
-          <div class="proj-card-badges">
-            <span class="os-badge os-badge--open">Published · Journal of Dairy Science</span>
-          </div>
-          <h4 class="proj-card-title">DLGBLUP</h4>
-          <p class="proj-card-tagline">Hybrid deep learning + GBLUP model for nonlinear multi-trait genomic prediction.</p>
-        </div>
-        <p class="proj-card-desc">
-          Traditional GBLUP assumes linear relationships between traits — an assumption that
-          rarely holds. DLGBLUP adds a deep learning layer on top of GBLUP outputs to capture
-          nonlinear genetic correlations, improving prediction accuracy while keeping GBLUP's
-          interpretability.
-        </p>
-        <div class="proj-card-stack">
-          <span class="skill-tag skill-tag--accent">PyTorch</span>
-          <span class="skill-tag skill-tag--accent">Python</span>
-          <span class="skill-tag">R</span>
-          <span class="skill-tag">GBLUP</span>
-          <span class="skill-tag">Quantitative genetics</span>
-          <span class="skill-tag">Data simulation</span>
-        </div>
-        <div class="proj-card-footer">
-          <a href="https://github.com/fshokor/DLGBLUP" target="_blank" rel="noopener" class="proj-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
-            GitHub
-          </a>
-          <a href="https://doi.org/10.3168/jds.2024-26057" target="_blank" rel="noopener" class="proj-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Paper
-          </a>
-        </div>
-      </div>
- 
+
       <!-- scRNAseq_HCC -->
       <div class="proj-card">
         <div class="proj-card-header">
-          <div class="proj-card-badges">
-            <span class="os-badge os-badge--open">Open source · MIT</span>
-          </div>
           <h4 class="proj-card-title">scRNAseq_HCC</h4>
           <p class="proj-card-tagline">Single-cell RNA-seq + graph neural networks for drug target discovery in liver cancer.</p>
-        </div>
-        <p class="proj-card-desc">
-          Bulk RNA-seq can't capture the cellular heterogeneity of hepatocellular carcinoma.
-          This pipeline combines scRNA-seq clustering and cell-type annotation with graph
-          neural networks (GCN/GAT/GraphSAGE) to rank drug candidates from protein-protein
-          interaction networks.
-        </p>
-        <div class="proj-card-stack">
-          <span class="skill-tag skill-tag--accent">Scanpy</span>
-          <span class="skill-tag skill-tag--accent">PyTorch</span>
-          <span class="skill-tag skill-tag--accent">PyTorch Geometric</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">R</span>
-          <span class="skill-tag">scRNA-seq</span>
-          <span class="skill-tag">CellTypist</span>
-          <span class="skill-tag">GSEA</span>
         </div>
         <div class="proj-card-footer">
           <a href="https://github.com/fshokor/scRNAseq_HCC" target="_blank" rel="noopener" class="proj-link">
@@ -362,7 +226,21 @@
           </a>
         </div>
       </div>
- 
+
+      <!-- multiomics-drug-response -->
+      <div class="proj-card">
+        <div class="proj-card-header">
+          <h4 class="proj-card-title">multiomics-drug-response</h4>
+          <p class="proj-card-tagline">Cross-attention fusion of RNA + protein to predict cancer drug response, benchmarked under rigorous LCO/LDO splits.</p>
+        </div>
+        <div class="proj-card-footer">
+          <a href="https://github.com/fshokor/multiomics-drug-response" target="_blank" rel="noopener" class="proj-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+
     </div><!-- /proj-secondary-grid -->
  
   </div>
@@ -411,9 +289,9 @@
           <p class="pub-title">Contribution of Deep Learning Approaches to Genomic Prediction and Support for Selection Objectives</p>
           <p class="pub-journal">Université Paris-Saclay · INRAe / Eliance</p>
           <p class="pub-authors">Fatima Shokor</p>
-          <p class="pub-summary">
+          <!-- <p class="pub-summary">
             This PhD thesis investigates how deep learning can advance genomic prediction in animal breeding — an area long dominated by linear statistical models. Across three years at INRAe and Paris-Saclay, the work develops and evaluates neural network architectures capable of capturing nonlinear genetic relationships between traits, modelling heterosis in crossbreeding systems, and supporting selection objectives that traditional methods cannot address. The thesis bridges quantitative genetics and deep learning, validating approaches on both simulated data and real livestock datasets.
-          </p>
+          </p> -->
           <div class="pub-links">
             <a href="https://pastel.hal.science/tel-05351591/" target="_blank" rel="noopener" class="pub-doi">
               HAL · tel-05351591
@@ -440,9 +318,9 @@
           <p class="pub-title">Deep learning and genomic best linear unbiased prediction integration: An approach to identify potential nonlinear genetic relationships between traits</p>
           <p class="pub-journal">Journal of Dairy Science · Vol. 108, No. 6</p>
           <p class="pub-authors">F. Shokor, P. Croiseau, H. Gangloff, R. Saintilan, T. Tribout, T. Mary-Huard, B.C.D. Cuyabano</p>
-          <p class="pub-summary">
+          <!-- <p class="pub-summary">
             Most genomic prediction methods assume linear relationships between traits — an assumption that often fails in complex biological systems. This paper introduces DLGBLUP, a hybrid model that first runs standard multi-trait GBLUP, then feeds its outputs into a deep learning layer that detects and exploits nonlinear genetic correlations. Validated on simulated and real dairy cattle data, DLGBLUP improves prediction accuracy for correlated traits while preserving the interpretability of the GBLUP foundation.
-          </p>
+          </p> -->
           <div class="pub-links">
             <a href="https://www.sciencedirect.com/science/article/pii/S0022030225002607" target="_blank" rel="noopener" class="pub-doi">
               doi: 10.3168/jds.2024-26057
@@ -466,10 +344,10 @@
         <div class="pub-body">
           <p class="pub-title">Deep Learning for genomic prediction accounting for heterosis in crossbreeding systems</p>
           <p class="pub-journal">bioRxiv</p>
-          <p class="pub-authors">F. Shokor, P. Croiseau, S. Fritz, A.A.A. Martin</p>
-          <p class="pub-summary">
+          <p class="pub-authors">F. Shokor, P. Croiseau, H. Gangloff, S. Fritz, A.A.A. Martin, T. Mary-Huard, B.C.D. Cuyabano</p>
+          <!-- <p class="pub-summary">
             Crossbreeding exploits hybrid vigour (heterosis) to boost animal performance, but most genomic prediction models are built for purebred animals and struggle to account for these non-additive effects. This study evaluates deep learning strategies for crossbred genomic prediction — testing how to incorporate breed composition, breed-of-origin of alleles, and explicit heterosis modelling. The key finding: DL outperforms traditional statistical methods when heterosis is present, and separating additive and heterosis predictions then combining them with effect-specific weights yields the highest accuracy.
-          </p>
+          </p> -->
           <div class="pub-links">
             <a href="https://www.biorxiv.org/content/10.1101/2025.07.24.666530v1" target="_blank" rel="noopener" class="pub-doi">
               doi: 10.1101/2025.07.24.666530
@@ -546,10 +424,10 @@
       <span class="label-line"></span>
       <span class="label-text">05 / 08 — Education</span>
     </div>
- 
+<!--  
     <h2 class="section-heading reveal">
       Built on <em>rigour</em>,<br>driven by <strong>curiosity</strong>
-    </h2>
+    </h2> -->
  
     <div class="edu-timeline">
  
