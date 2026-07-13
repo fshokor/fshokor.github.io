@@ -1,4 +1,4 @@
-# Fatima Shokor — Personal Portfolio
+# Fatima Shokor - Personal Portfolio
 
 Personal portfolio website for Fatima Shokor, PhD Bioinformatician.
 
