@@ -26,54 +26,6 @@
   <rect width="1200" height="630" fill="url(#bgGrad)"/>
   <rect width="1200" height="630" fill="url(#glowRight)"/>
 
-  <!-- Grid overlay -->
-  <g opacity="0.05" stroke="#b4d2ff" stroke-width="0.5" clip-path="url(#canvas)">
-    <line x1="40" y1="0" x2="40" y2="630"/>
-    <line x1="80" y1="0" x2="80" y2="630"/>
-    <line x1="120" y1="0" x2="120" y2="630"/>
-    <line x1="160" y1="0" x2="160" y2="630"/>
-    <line x1="200" y1="0" x2="200" y2="630"/>
-    <line x1="240" y1="0" x2="240" y2="630"/>
-    <line x1="280" y1="0" x2="280" y2="630"/>
-    <line x1="320" y1="0" x2="320" y2="630"/>
-    <line x1="360" y1="0" x2="360" y2="630"/>
-    <line x1="400" y1="0" x2="400" y2="630"/>
-    <line x1="440" y1="0" x2="440" y2="630"/>
-    <line x1="480" y1="0" x2="480" y2="630"/>
-    <line x1="520" y1="0" x2="520" y2="630"/>
-    <line x1="560" y1="0" x2="560" y2="630"/>
-    <line x1="600" y1="0" x2="600" y2="630"/>
-    <line x1="640" y1="0" x2="640" y2="630"/>
-    <line x1="680" y1="0" x2="680" y2="630"/>
-    <line x1="720" y1="0" x2="720" y2="630"/>
-    <line x1="760" y1="0" x2="760" y2="630"/>
-    <line x1="800" y1="0" x2="800" y2="630"/>
-    <line x1="840" y1="0" x2="840" y2="630"/>
-    <line x1="880" y1="0" x2="880" y2="630"/>
-    <line x1="920" y1="0" x2="920" y2="630"/>
-    <line x1="960" y1="0" x2="960" y2="630"/>
-    <line x1="1000" y1="0" x2="1000" y2="630"/>
-    <line x1="1040" y1="0" x2="1040" y2="630"/>
-    <line x1="1080" y1="0" x2="1080" y2="630"/>
-    <line x1="1120" y1="0" x2="1120" y2="630"/>
-    <line x1="1160" y1="0" x2="1160" y2="630"/>
-    <line x1="0" y1="40" x2="1200" y2="40"/>
-    <line x1="0" y1="80" x2="1200" y2="80"/>
-    <line x1="0" y1="120" x2="1200" y2="120"/>
-    <line x1="0" y1="160" x2="1200" y2="160"/>
-    <line x1="0" y1="200" x2="1200" y2="200"/>
-    <line x1="0" y1="240" x2="1200" y2="240"/>
-    <line x1="0" y1="280" x2="1200" y2="280"/>
-    <line x1="0" y1="320" x2="1200" y2="320"/>
-    <line x1="0" y1="360" x2="1200" y2="360"/>
-    <line x1="0" y1="400" x2="1200" y2="400"/>
-    <line x1="0" y1="440" x2="1200" y2="440"/>
-    <line x1="0" y1="480" x2="1200" y2="480"/>
-    <line x1="0" y1="520" x2="1200" y2="520"/>
-    <line x1="0" y1="560" x2="1200" y2="560"/>
-    <line x1="0" y1="600" x2="1200" y2="600"/>
-  </g>
-
   <!-- DNA helix right side -->
   <g clip-path="url(#canvas)" opacity="0.7">
     <!-- Strand dots and connectors - hand-tuned sine wave pattern -->
@@ -177,65 +129,74 @@
     <text x="1050" y="460" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.18">C</text>
     <text x="1090" y="155" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.15">T</text>
     <text x="1130" y="340" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.15">A</text>
+
+    <!-- Floating particles - left side (mirrored) -->
+    <circle cx="758" cy="120" r="2" fill="#4da6ff" opacity="0.3"/>
+    <circle cx="708" cy="200" r="1.5" fill="#4da6ff" opacity="0.25"/>
+    <circle cx="738" cy="310" r="2.5" fill="#4da6ff" opacity="0.2"/>
+    <circle cx="668" cy="180" r="1.5" fill="#4da6ff" opacity="0.3"/>
+    <circle cx="628" cy="400" r="2" fill="#4da6ff" opacity="0.2"/>
+    <circle cx="688" cy="500" r="1.5" fill="#4da6ff" opacity="0.25"/>
+    <circle cx="648" cy="80" r="2" fill="#4da6ff" opacity="0.2"/>
+    <circle cx="588" cy="300" r="1.5" fill="#4da6ff" opacity="0.15"/>
+    <circle cx="720" cy="565" r="1.5" fill="#4da6ff" opacity="0.2"/>
+    <circle cx="610" cy="130" r="1.5" fill="#4da6ff" opacity="0.18"/>
+
+    <!-- ATGC chars - left side (mirrored) -->
+    <text x="768" y="95" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.2">A</text>
+    <text x="718" y="230" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.18">T</text>
+    <text x="753" y="370" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.2">G</text>
+    <text x="678" y="460" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.18">C</text>
+    <text x="638" y="155" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.15">T</text>
+    <text x="598" y="340" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.15">A</text>
+    <text x="700" y="500" font-family="monospace" font-size="11" fill="#4da6ff" opacity="0.15">G</text>
   </g>
 
   <!-- Left accent border -->
   <rect x="0" y="0" width="4" height="630" fill="#4da6ff"/>
 
-  <!-- Top label -->
-  <text x="52" y="52" font-family="'DM Mono', monospace" font-size="13" fill="#b4d2ff" opacity="0.5"
-        letter-spacing="0.5">fs_bioinformatics · Paris, FR · fshokor.github.io</text>
-
   <!-- FATIMA -->
-  <text x="48" y="200" font-family="'Syne', 'Arial Black', sans-serif" font-size="112" font-weight="800"
-        fill="#e0eeff" letter-spacing="-2">FATIMA</text>
+  <text x="48" y="180" font-family="'IBM Plex Mono', monospace" font-size="104" font-weight="500"
+        fill="#e0eeff" letter-spacing="-1">FATIMA</text>
 
-  <!-- SHOKOR — SH in accent, REST in text -->
-  <text x="48" y="318" font-family="'Syne', 'Arial Black', sans-serif" font-size="112" font-weight="800"
-        letter-spacing="-2">
-    <tspan fill="#4da6ff">SH</tspan><tspan fill="#e0eeff">OKOR</tspan>
-  </text>
+  <!-- SHOKOR — all white -->
+  <text x="48" y="296" font-family="'IBM Plex Mono', monospace" font-size="104" font-weight="500"
+        fill="#e0eeff" letter-spacing="-1">SHOKOR</text>
 
   <!-- Separator line -->
-  <rect x="48" y="338" width="390" height="2" fill="#4da6ff" opacity="0.7"/>
+  <rect x="48" y="318" width="390" height="2" fill="#4da6ff" opacity="0.7"/>
 
   <!-- Title -->
-  <text x="48" y="372" font-family="'Lora', Georgia, serif" font-size="20" font-style="italic"
+  <text x="48" y="352" font-family="'Lora', Georgia, serif" font-size="20" font-style="italic"
         fill="#b4d2ff" opacity="0.85" letter-spacing="0.3">
     PhD Bioinformatician · Deep Learning · Genomics
   </text>
 
-  <!-- Tagline -->
-  <text x="48" y="404" font-family="'DM Mono', monospace" font-size="14"
-        fill="#b4d2ff" opacity="0.55" letter-spacing="0.2">
-    Building AI tools for the omics era.
-  </text>
-
   <!-- Tag pills -->
   <!-- Python -->
-  <rect x="48" y="430" width="68" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="68" y="448" font-family="'DM Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Python</text>
+  <rect x="48" y="402" width="68" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="82" y="420" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Python</text>
 
   <!-- PyTorch -->
-  <rect x="126" y="430" width="68" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="160" y="448" font-family="'DM Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">PyTorch</text>
+  <rect x="126" y="402" width="68" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="160" y="420" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">PyTorch</text>
 
   <!-- Genomics -->
-  <rect x="204" y="430" width="80" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="244" y="448" font-family="'DM Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Genomics</text>
+  <rect x="204" y="402" width="80" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="244" y="420" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Genomics</text>
 
   <!-- Single-cell -->
-  <rect x="294" y="430" width="88" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="338" y="448" font-family="'DM Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Single-cell</text>
+  <rect x="294" y="402" width="88" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="338" y="420" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Single-cell</text>
 
-  <!-- OmicSage -->
-  <rect x="392" y="430" width="84" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
-  <text x="434" y="448" font-family="'DM Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">OmicSage</text>
+  <!-- Multiomics -->
+  <rect x="392" y="402" width="104" height="26" rx="4" fill="#4da6ff" fill-opacity="0.09" stroke="#4da6ff" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="444" y="420" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#4da6ff" opacity="0.85" text-anchor="middle">Multiomics</text>
 
   <!-- Open to work badge -->
   <rect x="1032" y="570" width="136" height="28" rx="4" fill="#4da6ff" fill-opacity="0.08" stroke="#4da6ff" stroke-opacity="0.4" stroke-width="1"/>
   <circle cx="1050" cy="584" r="4" fill="#50dc64" opacity="0.9"/>
-  <text x="1062" y="589" font-family="'DM Mono', monospace" font-size="12" fill="#b4d2ff" opacity="0.75">Open to work</text>
+  <text x="1062" y="589" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#b4d2ff" opacity="0.75">Open to work</text>
 
   <!-- Vignette -->
   <rect width="1200" height="630" fill="url(#vignette)"/>
